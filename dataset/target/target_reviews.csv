@@ -1,0 +1,11 @@
+review_id,user_id,review_text,label,language,created_at
+1,U001,The picture quality is amazing and the setup was easy.,positive,en,2026-06-01 10:15:00
+2,U002,Delivery was delayed by three days.,negative,en,2026-06-01 11:20:00
+3,U003,Great value for money!,positive,en,2026-06-02 09:05:00
+5,U005,The remote control stopped working after one week.,positive,en,2026-06-03 14:15:00
+6,U006,Excellent customer support and fast response.,positive,en,2026-06-03 16:10:00
+7,U007,This TV keeps restarting randomly.,negative,en,2026-06-04 08:45:00
+8,U008,Fantastic colors and smooth streaming.,positive,en,2026-06-04 12:00:00
+9,U009,The installation guide was confusing.,negative,en,2026-06-05 09:30:00
+10,U010,Highly recommended for movie lovers.,positive,en,2026-06-05 18:00:00
+10,U010,Highly recommended for movie lovers.,positive,en,2026-06-05 18:00:00
