@@ -359,3 +359,56 @@ That makes your framework reusable across different projects—the kind of desig
 
 #### Migrating AWS s3 to GCS, what validation do we do
 For S3 to GCS migration, I would validate first at object level by comparing object counts, paths, sizes, metadata, and checksums. Then I would validate at content level by reading the migrated datasets and checking schema, row counts, missing records, duplicates, nulls, business rules, and source-target parity. That gives both transfer integrity and data quality evidence for migration sign-off. The goal of the validation framework is to compare data before and after cloud migration. At the object level, it checks that files moved from S3 to GCS completely. At the content level, it validates schema, row counts, duplicates, missing records, nulls, checksums, and business rules. The final output is an evidence report showing whether the migrated data is ready for acceptance sign-off.
+
+
+## Data completness checks
+we are checking to know if the data is complete or not. columns_with_completeness_issues:
+- Quantity
+- Price
+- Last Restocked
+
+And for each column, we get information on the :
+
+null_nan_count
+empty_string_count
+whitespace_only_count
+total_missing_count
+missing_percentage
+sample_missing_rows
+
+So it answers both questions:
+
+Which columns have completeness issues?
+What exactly is wrong in each column?
+
+### What uniqueness validation checks
+
+For your warehouse dataset:
+
+Product ID
+
+should be unique.
+
+So we check:
+
+duplicate full rows
+duplicate primary keys
+duplicate business keys, if needed
+sample duplicate records
+duplicate count per key
+
+### primary key vs Business key
+A primary key is a database constraint used to uniquely identify a record, while a business key is based on business rules and may consist of one or more columns that should uniquely identify a real-world entity. During migration validation, I check primary keys to ensure database integrity, and I can also validate business keys to detect logical duplicates that violate business requirements.
+
+
+# validation_rules.yaml file
+│
+├── required_columns        → Completeness Validator
+├── expected_data_types     → Schema Validator
+├── numeric_columns         → Validity Validator
+├── date_columns            → Validity Validator
+├── allowed_values          → Validity Validator
+├── business_rules          → Business Rule Validator
+└── compare_columns         → Source-Target Parity Validator
+
+"Each validator reads only the configuration relevant to its responsibility. The validation engine is generic, while dataset-specific rules are externalized in YAML."
