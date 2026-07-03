@@ -1,0 +1,2035 @@
+{
+    "overall_status": "FAIL",
+    "validation_results": [
+        {
+            "check_name": "row_count_validation",
+            "dataset_name": "source_vs_target",
+            "source_count": 1000,
+            "target_count": 1000,
+            "difference": 0,
+            "status": "PASS"
+        },
+        {
+            "check_name": "completeness_validation",
+            "dataset_name": "source_warehouse",
+            "status": "FAIL",
+            "max_missing_percentage": 0.0,
+            "columns_with_completeness_issues": [
+                "Quantity",
+                "Price",
+                "Last Restocked"
+            ],
+            "issue_details_by_column": {
+                "Quantity": {
+                    "null_nan_count": 158,
+                    "empty_string_count": 0,
+                    "whitespace_only_count": 0,
+                    "total_missing_count": 158,
+                    "missing_percentage": 15.8,
+                    "sample_missing_rows": [
+                        {
+                            "Product ID": 1466,
+                            "Product Name": " widget a ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 49.99,
+                            "Supplier": "Supplier B",
+                            "Status": "In Stock",
+                            "Last Restocked": "15/01/2023"
+                        },
+                        {
+                            "Product ID": 1276,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 19.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1160,
+                            "Product Name": " gadget y ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 5",
+                            "Quantity": NaN,
+                            "Price": 29.99,
+                            "Supplier": "Supplier B",
+                            "Status": "Low Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1699,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 9.99,
+                            "Supplier": "Supplier B",
+                            "Status": "Out of Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1189,
+                            "Product Name": " widget a ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 29.99,
+                            "Supplier": "Supplier A",
+                            "Status": "Low Stock",
+                            "Last Restocked": "25/04/2023"
+                        }
+                    ]
+                },
+                "Price": {
+                    "null_nan_count": 207,
+                    "empty_string_count": 0,
+                    "whitespace_only_count": 0,
+                    "total_missing_count": 207,
+                    "missing_percentage": 20.7,
+                    "sample_missing_rows": [
+                        {
+                            "Product ID": 1071,
+                            "Product Name": " widget b ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 5",
+                            "Quantity": "300",
+                            "Price": NaN,
+                            "Supplier": "Supplier A",
+                            "Status": "In Stock",
+                            "Last Restocked": "20/12/2022"
+                        },
+                        {
+                            "Product ID": 1087,
+                            "Product Name": " widget a ",
+                            "Category": "TOYS",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 3",
+                            "Quantity": "50",
+                            "Price": NaN,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "15/01/2023"
+                        },
+                        {
+                            "Product ID": 1871,
+                            "Product Name": " widget b ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 2",
+                            "Quantity": "100",
+                            "Price": NaN,
+                            "Supplier": "Supplier D",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1308,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 1",
+                            "Quantity": "300",
+                            "Price": NaN,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1459,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 2",
+                            "Quantity": "100",
+                            "Price": NaN,
+                            "Supplier": "Supplier D",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "20/12/2022"
+                        }
+                    ]
+                },
+                "Last Restocked": {
+                    "null_nan_count": 200,
+                    "empty_string_count": 0,
+                    "whitespace_only_count": 0,
+                    "total_missing_count": 200,
+                    "missing_percentage": 20.0,
+                    "sample_missing_rows": [
+                        {
+                            "Product ID": 1102,
+                            "Product Name": " gadget y ",
+                            "Category": "ELECTRONICS",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": "300",
+                            "Price": 9.99,
+                            "Supplier": "Supplier C",
+                            "Status": "In Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1435,
+                            "Product Name": " gadget y ",
+                            "Category": "ELECTRONICS",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 4",
+                            "Quantity": "two hundred",
+                            "Price": 19.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1385,
+                            "Product Name": " gadget z ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 4",
+                            "Quantity": "50",
+                            "Price": 19.99,
+                            "Supplier": "Supplier B",
+                            "Status": "In Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1160,
+                            "Product Name": " gadget y ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 5",
+                            "Quantity": NaN,
+                            "Price": 29.99,
+                            "Supplier": "Supplier B",
+                            "Status": "Low Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1560,
+                            "Product Name": " gadget z ",
+                            "Category": "ELECTRONICS",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 4",
+                            "Quantity": "150",
+                            "Price": 49.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Low Stock",
+                            "Last Restocked": NaN
+                        }
+                    ]
+                }
+            },
+            "columns_exceeding_threshold": {
+                "Quantity": {
+                    "null_nan_count": 158,
+                    "empty_string_count": 0,
+                    "whitespace_only_count": 0,
+                    "total_missing_count": 158,
+                    "missing_percentage": 15.8,
+                    "sample_missing_rows": [
+                        {
+                            "Product ID": 1466,
+                            "Product Name": " widget a ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 49.99,
+                            "Supplier": "Supplier B",
+                            "Status": "In Stock",
+                            "Last Restocked": "15/01/2023"
+                        },
+                        {
+                            "Product ID": 1276,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 19.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1160,
+                            "Product Name": " gadget y ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 5",
+                            "Quantity": NaN,
+                            "Price": 29.99,
+                            "Supplier": "Supplier B",
+                            "Status": "Low Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1699,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 9.99,
+                            "Supplier": "Supplier B",
+                            "Status": "Out of Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1189,
+                            "Product Name": " widget a ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 29.99,
+                            "Supplier": "Supplier A",
+                            "Status": "Low Stock",
+                            "Last Restocked": "25/04/2023"
+                        }
+                    ]
+                },
+                "Price": {
+                    "null_nan_count": 207,
+                    "empty_string_count": 0,
+                    "whitespace_only_count": 0,
+                    "total_missing_count": 207,
+                    "missing_percentage": 20.7,
+                    "sample_missing_rows": [
+                        {
+                            "Product ID": 1071,
+                            "Product Name": " widget b ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 5",
+                            "Quantity": "300",
+                            "Price": NaN,
+                            "Supplier": "Supplier A",
+                            "Status": "In Stock",
+                            "Last Restocked": "20/12/2022"
+                        },
+                        {
+                            "Product ID": 1087,
+                            "Product Name": " widget a ",
+                            "Category": "TOYS",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 3",
+                            "Quantity": "50",
+                            "Price": NaN,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "15/01/2023"
+                        },
+                        {
+                            "Product ID": 1871,
+                            "Product Name": " widget b ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 2",
+                            "Quantity": "100",
+                            "Price": NaN,
+                            "Supplier": "Supplier D",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1308,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 1",
+                            "Quantity": "300",
+                            "Price": NaN,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1459,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 2",
+                            "Quantity": "100",
+                            "Price": NaN,
+                            "Supplier": "Supplier D",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "20/12/2022"
+                        }
+                    ]
+                },
+                "Last Restocked": {
+                    "null_nan_count": 200,
+                    "empty_string_count": 0,
+                    "whitespace_only_count": 0,
+                    "total_missing_count": 200,
+                    "missing_percentage": 20.0,
+                    "sample_missing_rows": [
+                        {
+                            "Product ID": 1102,
+                            "Product Name": " gadget y ",
+                            "Category": "ELECTRONICS",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": "300",
+                            "Price": 9.99,
+                            "Supplier": "Supplier C",
+                            "Status": "In Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1435,
+                            "Product Name": " gadget y ",
+                            "Category": "ELECTRONICS",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 4",
+                            "Quantity": "two hundred",
+                            "Price": 19.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1385,
+                            "Product Name": " gadget z ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 4",
+                            "Quantity": "50",
+                            "Price": 19.99,
+                            "Supplier": "Supplier B",
+                            "Status": "In Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1160,
+                            "Product Name": " gadget y ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 5",
+                            "Quantity": NaN,
+                            "Price": 29.99,
+                            "Supplier": "Supplier B",
+                            "Status": "Low Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1560,
+                            "Product Name": " gadget z ",
+                            "Category": "ELECTRONICS",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 4",
+                            "Quantity": "150",
+                            "Price": 49.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Low Stock",
+                            "Last Restocked": NaN
+                        }
+                    ]
+                }
+            },
+            "required_column_issues": {
+                "Product ID": {
+                    "total_missing_count": 0,
+                    "missing_percentage": 0.0,
+                    "status": "PASS"
+                },
+                "Product Name": {
+                    "total_missing_count": 0,
+                    "missing_percentage": 0.0,
+                    "status": "PASS"
+                },
+                "Category": {
+                    "total_missing_count": 0,
+                    "missing_percentage": 0.0,
+                    "status": "PASS"
+                },
+                "Warehouse": {
+                    "total_missing_count": 0,
+                    "missing_percentage": 0.0,
+                    "status": "PASS"
+                },
+                "Location": {
+                    "total_missing_count": 0,
+                    "missing_percentage": 0.0,
+                    "status": "PASS"
+                },
+                "Quantity": {
+                    "null_nan_count": 158,
+                    "empty_string_count": 0,
+                    "whitespace_only_count": 0,
+                    "total_missing_count": 158,
+                    "missing_percentage": 15.8,
+                    "sample_missing_rows": [
+                        {
+                            "Product ID": 1466,
+                            "Product Name": " widget a ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 49.99,
+                            "Supplier": "Supplier B",
+                            "Status": "In Stock",
+                            "Last Restocked": "15/01/2023"
+                        },
+                        {
+                            "Product ID": 1276,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 19.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1160,
+                            "Product Name": " gadget y ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 5",
+                            "Quantity": NaN,
+                            "Price": 29.99,
+                            "Supplier": "Supplier B",
+                            "Status": "Low Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1699,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 9.99,
+                            "Supplier": "Supplier B",
+                            "Status": "Out of Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1189,
+                            "Product Name": " widget a ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 29.99,
+                            "Supplier": "Supplier A",
+                            "Status": "Low Stock",
+                            "Last Restocked": "25/04/2023"
+                        }
+                    ]
+                },
+                "Price": {
+                    "null_nan_count": 207,
+                    "empty_string_count": 0,
+                    "whitespace_only_count": 0,
+                    "total_missing_count": 207,
+                    "missing_percentage": 20.7,
+                    "sample_missing_rows": [
+                        {
+                            "Product ID": 1071,
+                            "Product Name": " widget b ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 5",
+                            "Quantity": "300",
+                            "Price": NaN,
+                            "Supplier": "Supplier A",
+                            "Status": "In Stock",
+                            "Last Restocked": "20/12/2022"
+                        },
+                        {
+                            "Product ID": 1087,
+                            "Product Name": " widget a ",
+                            "Category": "TOYS",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 3",
+                            "Quantity": "50",
+                            "Price": NaN,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "15/01/2023"
+                        },
+                        {
+                            "Product ID": 1871,
+                            "Product Name": " widget b ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 2",
+                            "Quantity": "100",
+                            "Price": NaN,
+                            "Supplier": "Supplier D",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1308,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 1",
+                            "Quantity": "300",
+                            "Price": NaN,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1459,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 2",
+                            "Quantity": "100",
+                            "Price": NaN,
+                            "Supplier": "Supplier D",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "20/12/2022"
+                        }
+                    ]
+                },
+                "Status": {
+                    "total_missing_count": 0,
+                    "missing_percentage": 0.0,
+                    "status": "PASS"
+                }
+            }
+        },
+        {
+            "check_name": "completeness_validation",
+            "dataset_name": "target_warehouse",
+            "status": "FAIL",
+            "max_missing_percentage": 0.0,
+            "columns_with_completeness_issues": [
+                "Quantity",
+                "Price",
+                "Last Restocked"
+            ],
+            "issue_details_by_column": {
+                "Quantity": {
+                    "null_nan_count": 158,
+                    "empty_string_count": 0,
+                    "whitespace_only_count": 0,
+                    "total_missing_count": 158,
+                    "missing_percentage": 15.8,
+                    "sample_missing_rows": [
+                        {
+                            "Product ID": 1466,
+                            "Product Name": " widget a ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 49.99,
+                            "Supplier": "Supplier B",
+                            "Status": "In Stock",
+                            "Last Restocked": "15/01/2023"
+                        },
+                        {
+                            "Product ID": 1276,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 19.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1160,
+                            "Product Name": " gadget y ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 5",
+                            "Quantity": NaN,
+                            "Price": 29.99,
+                            "Supplier": "Supplier B",
+                            "Status": "Low Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1699,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 9.99,
+                            "Supplier": "Supplier B",
+                            "Status": "Out of Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1189,
+                            "Product Name": " widget a ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 29.99,
+                            "Supplier": "Supplier A",
+                            "Status": "Low Stock",
+                            "Last Restocked": "25/04/2023"
+                        }
+                    ]
+                },
+                "Price": {
+                    "null_nan_count": 207,
+                    "empty_string_count": 0,
+                    "whitespace_only_count": 0,
+                    "total_missing_count": 207,
+                    "missing_percentage": 20.7,
+                    "sample_missing_rows": [
+                        {
+                            "Product ID": 1071,
+                            "Product Name": " widget b ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 5",
+                            "Quantity": "300",
+                            "Price": NaN,
+                            "Supplier": "Supplier A",
+                            "Status": "In Stock",
+                            "Last Restocked": "20/12/2022"
+                        },
+                        {
+                            "Product ID": 1087,
+                            "Product Name": " widget a ",
+                            "Category": "TOYS",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 3",
+                            "Quantity": "50",
+                            "Price": NaN,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "15/01/2023"
+                        },
+                        {
+                            "Product ID": 1871,
+                            "Product Name": " widget b ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 2",
+                            "Quantity": "100",
+                            "Price": NaN,
+                            "Supplier": "Supplier D",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1308,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 1",
+                            "Quantity": "300",
+                            "Price": NaN,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1459,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 2",
+                            "Quantity": "100",
+                            "Price": NaN,
+                            "Supplier": "Supplier D",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "20/12/2022"
+                        }
+                    ]
+                },
+                "Last Restocked": {
+                    "null_nan_count": 200,
+                    "empty_string_count": 0,
+                    "whitespace_only_count": 0,
+                    "total_missing_count": 200,
+                    "missing_percentage": 20.0,
+                    "sample_missing_rows": [
+                        {
+                            "Product ID": 1102,
+                            "Product Name": " gadget y ",
+                            "Category": "ELECTRONICS",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": "300",
+                            "Price": 9.99,
+                            "Supplier": "Supplier C",
+                            "Status": "In Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1435,
+                            "Product Name": " gadget y ",
+                            "Category": "ELECTRONICS",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 4",
+                            "Quantity": "two hundred",
+                            "Price": 19.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1385,
+                            "Product Name": " gadget z ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 4",
+                            "Quantity": "50",
+                            "Price": 19.99,
+                            "Supplier": "Supplier B",
+                            "Status": "In Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1160,
+                            "Product Name": " gadget y ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 5",
+                            "Quantity": NaN,
+                            "Price": 29.99,
+                            "Supplier": "Supplier B",
+                            "Status": "Low Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1560,
+                            "Product Name": " gadget z ",
+                            "Category": "ELECTRONICS",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 4",
+                            "Quantity": "150",
+                            "Price": 49.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Low Stock",
+                            "Last Restocked": NaN
+                        }
+                    ]
+                }
+            },
+            "columns_exceeding_threshold": {
+                "Quantity": {
+                    "null_nan_count": 158,
+                    "empty_string_count": 0,
+                    "whitespace_only_count": 0,
+                    "total_missing_count": 158,
+                    "missing_percentage": 15.8,
+                    "sample_missing_rows": [
+                        {
+                            "Product ID": 1466,
+                            "Product Name": " widget a ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 49.99,
+                            "Supplier": "Supplier B",
+                            "Status": "In Stock",
+                            "Last Restocked": "15/01/2023"
+                        },
+                        {
+                            "Product ID": 1276,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 19.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1160,
+                            "Product Name": " gadget y ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 5",
+                            "Quantity": NaN,
+                            "Price": 29.99,
+                            "Supplier": "Supplier B",
+                            "Status": "Low Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1699,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 9.99,
+                            "Supplier": "Supplier B",
+                            "Status": "Out of Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1189,
+                            "Product Name": " widget a ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 29.99,
+                            "Supplier": "Supplier A",
+                            "Status": "Low Stock",
+                            "Last Restocked": "25/04/2023"
+                        }
+                    ]
+                },
+                "Price": {
+                    "null_nan_count": 207,
+                    "empty_string_count": 0,
+                    "whitespace_only_count": 0,
+                    "total_missing_count": 207,
+                    "missing_percentage": 20.7,
+                    "sample_missing_rows": [
+                        {
+                            "Product ID": 1071,
+                            "Product Name": " widget b ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 5",
+                            "Quantity": "300",
+                            "Price": NaN,
+                            "Supplier": "Supplier A",
+                            "Status": "In Stock",
+                            "Last Restocked": "20/12/2022"
+                        },
+                        {
+                            "Product ID": 1087,
+                            "Product Name": " widget a ",
+                            "Category": "TOYS",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 3",
+                            "Quantity": "50",
+                            "Price": NaN,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "15/01/2023"
+                        },
+                        {
+                            "Product ID": 1871,
+                            "Product Name": " widget b ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 2",
+                            "Quantity": "100",
+                            "Price": NaN,
+                            "Supplier": "Supplier D",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1308,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 1",
+                            "Quantity": "300",
+                            "Price": NaN,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1459,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 2",
+                            "Quantity": "100",
+                            "Price": NaN,
+                            "Supplier": "Supplier D",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "20/12/2022"
+                        }
+                    ]
+                },
+                "Last Restocked": {
+                    "null_nan_count": 200,
+                    "empty_string_count": 0,
+                    "whitespace_only_count": 0,
+                    "total_missing_count": 200,
+                    "missing_percentage": 20.0,
+                    "sample_missing_rows": [
+                        {
+                            "Product ID": 1102,
+                            "Product Name": " gadget y ",
+                            "Category": "ELECTRONICS",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": "300",
+                            "Price": 9.99,
+                            "Supplier": "Supplier C",
+                            "Status": "In Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1435,
+                            "Product Name": " gadget y ",
+                            "Category": "ELECTRONICS",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 4",
+                            "Quantity": "two hundred",
+                            "Price": 19.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1385,
+                            "Product Name": " gadget z ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 4",
+                            "Quantity": "50",
+                            "Price": 19.99,
+                            "Supplier": "Supplier B",
+                            "Status": "In Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1160,
+                            "Product Name": " gadget y ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 5",
+                            "Quantity": NaN,
+                            "Price": 29.99,
+                            "Supplier": "Supplier B",
+                            "Status": "Low Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1560,
+                            "Product Name": " gadget z ",
+                            "Category": "ELECTRONICS",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 4",
+                            "Quantity": "150",
+                            "Price": 49.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Low Stock",
+                            "Last Restocked": NaN
+                        }
+                    ]
+                }
+            },
+            "required_column_issues": {
+                "Product ID": {
+                    "total_missing_count": 0,
+                    "missing_percentage": 0.0,
+                    "status": "PASS"
+                },
+                "Product Name": {
+                    "total_missing_count": 0,
+                    "missing_percentage": 0.0,
+                    "status": "PASS"
+                },
+                "Category": {
+                    "total_missing_count": 0,
+                    "missing_percentage": 0.0,
+                    "status": "PASS"
+                },
+                "Warehouse": {
+                    "total_missing_count": 0,
+                    "missing_percentage": 0.0,
+                    "status": "PASS"
+                },
+                "Location": {
+                    "total_missing_count": 0,
+                    "missing_percentage": 0.0,
+                    "status": "PASS"
+                },
+                "Quantity": {
+                    "null_nan_count": 158,
+                    "empty_string_count": 0,
+                    "whitespace_only_count": 0,
+                    "total_missing_count": 158,
+                    "missing_percentage": 15.8,
+                    "sample_missing_rows": [
+                        {
+                            "Product ID": 1466,
+                            "Product Name": " widget a ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 49.99,
+                            "Supplier": "Supplier B",
+                            "Status": "In Stock",
+                            "Last Restocked": "15/01/2023"
+                        },
+                        {
+                            "Product ID": 1276,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 19.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1160,
+                            "Product Name": " gadget y ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 5",
+                            "Quantity": NaN,
+                            "Price": 29.99,
+                            "Supplier": "Supplier B",
+                            "Status": "Low Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1699,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 9.99,
+                            "Supplier": "Supplier B",
+                            "Status": "Out of Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1189,
+                            "Product Name": " widget a ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": NaN,
+                            "Price": 29.99,
+                            "Supplier": "Supplier A",
+                            "Status": "Low Stock",
+                            "Last Restocked": "25/04/2023"
+                        }
+                    ]
+                },
+                "Price": {
+                    "null_nan_count": 207,
+                    "empty_string_count": 0,
+                    "whitespace_only_count": 0,
+                    "total_missing_count": 207,
+                    "missing_percentage": 20.7,
+                    "sample_missing_rows": [
+                        {
+                            "Product ID": 1071,
+                            "Product Name": " widget b ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 5",
+                            "Quantity": "300",
+                            "Price": NaN,
+                            "Supplier": "Supplier A",
+                            "Status": "In Stock",
+                            "Last Restocked": "20/12/2022"
+                        },
+                        {
+                            "Product ID": 1087,
+                            "Product Name": " widget a ",
+                            "Category": "TOYS",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 3",
+                            "Quantity": "50",
+                            "Price": NaN,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "15/01/2023"
+                        },
+                        {
+                            "Product ID": 1871,
+                            "Product Name": " widget b ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 2",
+                            "Quantity": "100",
+                            "Price": NaN,
+                            "Supplier": "Supplier D",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1308,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 1",
+                            "Quantity": "300",
+                            "Price": NaN,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1459,
+                            "Product Name": " gadget y ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 2",
+                            "Quantity": "100",
+                            "Price": NaN,
+                            "Supplier": "Supplier D",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "20/12/2022"
+                        }
+                    ]
+                },
+                "Status": {
+                    "total_missing_count": 0,
+                    "missing_percentage": 0.0,
+                    "status": "PASS"
+                }
+            }
+        },
+        {
+            "check_name": "uniqueness_validation",
+            "dataset_name": "source_warehouse",
+            "duplicate_row_count": 0,
+            "duplicate_rows_preview": [],
+            "primary_key": "Product ID",
+            "primary_key_duplicate_count": 385,
+            "primary_key_duplicate_preview": [
+                {
+                    "Product ID": 1102,
+                    "Product Name": " gadget y ",
+                    "Category": "ELECTRONICS",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 1",
+                    "Quantity": "300",
+                    "Price": 9.99,
+                    "Supplier": "Supplier C",
+                    "Status": "In Stock",
+                    "Last Restocked": NaN
+                },
+                {
+                    "Product ID": 1860,
+                    "Product Name": " widget a ",
+                    "Category": "CLOTHING",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 3",
+                    "Quantity": "100",
+                    "Price": 19.99,
+                    "Supplier": "Supplier B",
+                    "Status": "In Stock",
+                    "Last Restocked": "20/12/2022"
+                },
+                {
+                    "Product ID": 1270,
+                    "Product Name": " gadget z ",
+                    "Category": "TOYS",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 4",
+                    "Quantity": "50",
+                    "Price": 49.99,
+                    "Supplier": "Supplier B",
+                    "Status": "In Stock",
+                    "Last Restocked": "20/12/2022"
+                },
+                {
+                    "Product ID": 1020,
+                    "Product Name": " widget c ",
+                    "Category": "CLOTHING",
+                    "Warehouse": "Warehouse 1",
+                    "Location": "Aisle 5",
+                    "Quantity": "two hundred",
+                    "Price": 9.99,
+                    "Supplier": "Supplier D",
+                    "Status": "Out of Stock",
+                    "Last Restocked": "20/12/2022"
+                },
+                {
+                    "Product ID": 1121,
+                    "Product Name": " widget b ",
+                    "Category": "TOYS",
+                    "Warehouse": "Warehouse 1",
+                    "Location": "Aisle 2",
+                    "Quantity": "50",
+                    "Price": 19.99,
+                    "Supplier": "Supplier C",
+                    "Status": "Out of Stock",
+                    "Last Restocked": "20/12/2022"
+                },
+                {
+                    "Product ID": 1214,
+                    "Product Name": " gadget z ",
+                    "Category": "FURNITURE",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 1",
+                    "Quantity": "50",
+                    "Price": 9.99,
+                    "Supplier": "Supplier A",
+                    "Status": "Low Stock",
+                    "Last Restocked": "15/01/2023"
+                },
+                {
+                    "Product ID": 1330,
+                    "Product Name": " widget c ",
+                    "Category": "TOYS",
+                    "Warehouse": "Warehouse 3",
+                    "Location": "Aisle 4",
+                    "Quantity": "150",
+                    "Price": 9.99,
+                    "Supplier": "Supplier B",
+                    "Status": "In Stock",
+                    "Last Restocked": "25/04/2023"
+                },
+                {
+                    "Product ID": 1372,
+                    "Product Name": " gadget y ",
+                    "Category": "FURNITURE",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 1",
+                    "Quantity": "two hundred",
+                    "Price": 49.99,
+                    "Supplier": "Supplier A",
+                    "Status": "Low Stock",
+                    "Last Restocked": "05/03/2023"
+                },
+                {
+                    "Product ID": 1099,
+                    "Product Name": " widget a ",
+                    "Category": "ELECTRONICS",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 5",
+                    "Quantity": "300",
+                    "Price": 49.99,
+                    "Supplier": "Supplier B",
+                    "Status": "Out of Stock",
+                    "Last Restocked": "05/03/2023"
+                },
+                {
+                    "Product ID": 1871,
+                    "Product Name": " widget b ",
+                    "Category": "CLOTHING",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 2",
+                    "Quantity": "100",
+                    "Price": NaN,
+                    "Supplier": "Supplier D",
+                    "Status": "Out of Stock",
+                    "Last Restocked": "25/04/2023"
+                }
+            ],
+            "business_keys": [],
+            "business_key_duplicate_count": null,
+            "business_key_duplicate_preview": [],
+            "status": "FAIL"
+        },
+        {
+            "check_name": "uniqueness_validation",
+            "dataset_name": "target_warehouse",
+            "duplicate_row_count": 0,
+            "duplicate_rows_preview": [],
+            "primary_key": "Product ID",
+            "primary_key_duplicate_count": 385,
+            "primary_key_duplicate_preview": [
+                {
+                    "Product ID": 1102,
+                    "Product Name": " gadget y ",
+                    "Category": "ELECTRONICS",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 1",
+                    "Quantity": "300",
+                    "Price": 9.99,
+                    "Supplier": "Supplier C",
+                    "Status": "In Stock",
+                    "Last Restocked": NaN
+                },
+                {
+                    "Product ID": 1860,
+                    "Product Name": " widget a ",
+                    "Category": "CLOTHING",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 3",
+                    "Quantity": "100",
+                    "Price": 19.99,
+                    "Supplier": "Supplier B",
+                    "Status": "In Stock",
+                    "Last Restocked": "20/12/2022"
+                },
+                {
+                    "Product ID": 1270,
+                    "Product Name": " gadget z ",
+                    "Category": "TOYS",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 4",
+                    "Quantity": "50",
+                    "Price": 49.99,
+                    "Supplier": "Supplier B",
+                    "Status": "In Stock",
+                    "Last Restocked": "20/12/2022"
+                },
+                {
+                    "Product ID": 1020,
+                    "Product Name": " widget c ",
+                    "Category": "CLOTHING",
+                    "Warehouse": "Warehouse 1",
+                    "Location": "Aisle 5",
+                    "Quantity": "two hundred",
+                    "Price": 9.99,
+                    "Supplier": "Supplier D",
+                    "Status": "Out of Stock",
+                    "Last Restocked": "20/12/2022"
+                },
+                {
+                    "Product ID": 1121,
+                    "Product Name": " widget b ",
+                    "Category": "TOYS",
+                    "Warehouse": "Warehouse 1",
+                    "Location": "Aisle 2",
+                    "Quantity": "50",
+                    "Price": 19.99,
+                    "Supplier": "Supplier C",
+                    "Status": "Out of Stock",
+                    "Last Restocked": "20/12/2022"
+                },
+                {
+                    "Product ID": 1214,
+                    "Product Name": " gadget z ",
+                    "Category": "FURNITURE",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 1",
+                    "Quantity": "50",
+                    "Price": 9.99,
+                    "Supplier": "Supplier A",
+                    "Status": "Low Stock",
+                    "Last Restocked": "15/01/2023"
+                },
+                {
+                    "Product ID": 1330,
+                    "Product Name": " widget c ",
+                    "Category": "TOYS",
+                    "Warehouse": "Warehouse 3",
+                    "Location": "Aisle 4",
+                    "Quantity": "150",
+                    "Price": 9.99,
+                    "Supplier": "Supplier B",
+                    "Status": "In Stock",
+                    "Last Restocked": "25/04/2023"
+                },
+                {
+                    "Product ID": 1372,
+                    "Product Name": " gadget y ",
+                    "Category": "FURNITURE",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 1",
+                    "Quantity": "two hundred",
+                    "Price": 49.99,
+                    "Supplier": "Supplier A",
+                    "Status": "Low Stock",
+                    "Last Restocked": "05/03/2023"
+                },
+                {
+                    "Product ID": 1099,
+                    "Product Name": " widget a ",
+                    "Category": "ELECTRONICS",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 5",
+                    "Quantity": "300",
+                    "Price": 49.99,
+                    "Supplier": "Supplier B",
+                    "Status": "Out of Stock",
+                    "Last Restocked": "05/03/2023"
+                },
+                {
+                    "Product ID": 1871,
+                    "Product Name": " widget b ",
+                    "Category": "CLOTHING",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 2",
+                    "Quantity": "100",
+                    "Price": NaN,
+                    "Supplier": "Supplier D",
+                    "Status": "Out of Stock",
+                    "Last Restocked": "25/04/2023"
+                }
+            ],
+            "business_keys": [],
+            "business_key_duplicate_count": null,
+            "business_key_duplicate_preview": [],
+            "status": "FAIL"
+        },
+        {
+            "check_name": "validity_validation",
+            "dataset_name": "source_warehouse",
+            "status": "FAIL",
+            "issues": {
+                "Quantity": {
+                    "issue": "invalid_numeric_values",
+                    "invalid_count": 160,
+                    "sample_rows": [
+                        {
+                            "Product ID": 1435,
+                            "Product Name": " gadget y ",
+                            "Category": "ELECTRONICS",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 4",
+                            "Quantity": "two hundred",
+                            "Price": 19.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1106,
+                            "Product Name": " widget a ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 3",
+                            "Quantity": "two hundred",
+                            "Price": 9.99,
+                            "Supplier": "Supplier D",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1700,
+                            "Product Name": " widget a ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 2",
+                            "Quantity": "two hundred",
+                            "Price": 49.99,
+                            "Supplier": "Supplier B",
+                            "Status": "In Stock",
+                            "Last Restocked": "20/12/2022"
+                        },
+                        {
+                            "Product ID": 1020,
+                            "Product Name": " widget c ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 5",
+                            "Quantity": "two hundred",
+                            "Price": 9.99,
+                            "Supplier": "Supplier D",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "20/12/2022"
+                        },
+                        {
+                            "Product ID": 1372,
+                            "Product Name": " gadget y ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": "two hundred",
+                            "Price": 49.99,
+                            "Supplier": "Supplier A",
+                            "Status": "Low Stock",
+                            "Last Restocked": "05/03/2023"
+                        }
+                    ]
+                },
+                "Status": {
+                    "issue": "invalid_categorical_values",
+                    "allowed_values": [
+                        "In Stock",
+                        "Out of Stock"
+                    ],
+                    "invalid_count": 328,
+                    "sample_rows": [
+                        {
+                            "Product ID": 1214,
+                            "Product Name": " gadget z ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": "50",
+                            "Price": 9.99,
+                            "Supplier": "Supplier A",
+                            "Status": "Low Stock",
+                            "Last Restocked": "15/01/2023"
+                        },
+                        {
+                            "Product ID": 1458,
+                            "Product Name": " widget c ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 3",
+                            "Quantity": "300",
+                            "Price": 49.99,
+                            "Supplier": "Supplier A",
+                            "Status": "Low Stock",
+                            "Last Restocked": "05/03/2023"
+                        },
+                        {
+                            "Product ID": 1372,
+                            "Product Name": " gadget y ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": "two hundred",
+                            "Price": 49.99,
+                            "Supplier": "Supplier A",
+                            "Status": "Low Stock",
+                            "Last Restocked": "05/03/2023"
+                        },
+                        {
+                            "Product ID": 1663,
+                            "Product Name": " widget a ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 5",
+                            "Quantity": "50",
+                            "Price": 49.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Low Stock",
+                            "Last Restocked": "05/03/2023"
+                        },
+                        {
+                            "Product ID": 1661,
+                            "Product Name": " widget a ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": "50",
+                            "Price": 49.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Low Stock",
+                            "Last Restocked": "05/03/2023"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "check_name": "validity_validation",
+            "dataset_name": "target_warehouse",
+            "status": "FAIL",
+            "issues": {
+                "Quantity": {
+                    "issue": "invalid_numeric_values",
+                    "invalid_count": 160,
+                    "sample_rows": [
+                        {
+                            "Product ID": 1435,
+                            "Product Name": " gadget y ",
+                            "Category": "ELECTRONICS",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 4",
+                            "Quantity": "two hundred",
+                            "Price": 19.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Out of Stock",
+                            "Last Restocked": NaN
+                        },
+                        {
+                            "Product ID": 1106,
+                            "Product Name": " widget a ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 3",
+                            "Location": "Aisle 3",
+                            "Quantity": "two hundred",
+                            "Price": 9.99,
+                            "Supplier": "Supplier D",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "25/04/2023"
+                        },
+                        {
+                            "Product ID": 1700,
+                            "Product Name": " widget a ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 2",
+                            "Quantity": "two hundred",
+                            "Price": 49.99,
+                            "Supplier": "Supplier B",
+                            "Status": "In Stock",
+                            "Last Restocked": "20/12/2022"
+                        },
+                        {
+                            "Product ID": 1020,
+                            "Product Name": " widget c ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 1",
+                            "Location": "Aisle 5",
+                            "Quantity": "two hundred",
+                            "Price": 9.99,
+                            "Supplier": "Supplier D",
+                            "Status": "Out of Stock",
+                            "Last Restocked": "20/12/2022"
+                        },
+                        {
+                            "Product ID": 1372,
+                            "Product Name": " gadget y ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": "two hundred",
+                            "Price": 49.99,
+                            "Supplier": "Supplier A",
+                            "Status": "Low Stock",
+                            "Last Restocked": "05/03/2023"
+                        }
+                    ]
+                },
+                "Status": {
+                    "issue": "invalid_categorical_values",
+                    "allowed_values": [
+                        "In Stock",
+                        "Out of Stock"
+                    ],
+                    "invalid_count": 328,
+                    "sample_rows": [
+                        {
+                            "Product ID": 1214,
+                            "Product Name": " gadget z ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": "50",
+                            "Price": 9.99,
+                            "Supplier": "Supplier A",
+                            "Status": "Low Stock",
+                            "Last Restocked": "15/01/2023"
+                        },
+                        {
+                            "Product ID": 1458,
+                            "Product Name": " widget c ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 3",
+                            "Quantity": "300",
+                            "Price": 49.99,
+                            "Supplier": "Supplier A",
+                            "Status": "Low Stock",
+                            "Last Restocked": "05/03/2023"
+                        },
+                        {
+                            "Product ID": 1372,
+                            "Product Name": " gadget y ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": "two hundred",
+                            "Price": 49.99,
+                            "Supplier": "Supplier A",
+                            "Status": "Low Stock",
+                            "Last Restocked": "05/03/2023"
+                        },
+                        {
+                            "Product ID": 1663,
+                            "Product Name": " widget a ",
+                            "Category": "FURNITURE",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 5",
+                            "Quantity": "50",
+                            "Price": 49.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Low Stock",
+                            "Last Restocked": "05/03/2023"
+                        },
+                        {
+                            "Product ID": 1661,
+                            "Product Name": " widget a ",
+                            "Category": "CLOTHING",
+                            "Warehouse": "Warehouse 2",
+                            "Location": "Aisle 1",
+                            "Quantity": "50",
+                            "Price": 49.99,
+                            "Supplier": "Supplier C",
+                            "Status": "Low Stock",
+                            "Last Restocked": "05/03/2023"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "check_name": "business_rule_validation",
+            "dataset_name": "source_warehouse",
+            "status": "PASS",
+            "issues": {}
+        },
+        {
+            "check_name": "business_rule_validation",
+            "dataset_name": "target_warehouse",
+            "status": "PASS",
+            "issues": {}
+        },
+        {
+            "check_name": "source_target_parity_validation",
+            "dataset_name": "source_vs_target",
+            "status": "FAIL",
+            "primary_key": "Product ID",
+            "source_duplicate_primary_key_count": 658,
+            "target_duplicate_primary_key_count": 658,
+            "source_duplicate_primary_key_preview": [
+                {
+                    "Product ID": 1102,
+                    "Product Name": " gadget y ",
+                    "Category": "ELECTRONICS",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 1",
+                    "Quantity": "300",
+                    "Price": 9.99,
+                    "Supplier": "Supplier C",
+                    "Status": "In Stock",
+                    "Last Restocked": NaN
+                },
+                {
+                    "Product ID": 1860,
+                    "Product Name": " widget a ",
+                    "Category": "CLOTHING",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 3",
+                    "Quantity": "100",
+                    "Price": 19.99,
+                    "Supplier": "Supplier B",
+                    "Status": "In Stock",
+                    "Last Restocked": "20/12/2022"
+                },
+                {
+                    "Product ID": 1270,
+                    "Product Name": " gadget z ",
+                    "Category": "TOYS",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 4",
+                    "Quantity": "50",
+                    "Price": 49.99,
+                    "Supplier": "Supplier B",
+                    "Status": "In Stock",
+                    "Last Restocked": "20/12/2022"
+                },
+                {
+                    "Product ID": 1020,
+                    "Product Name": " widget c ",
+                    "Category": "CLOTHING",
+                    "Warehouse": "Warehouse 1",
+                    "Location": "Aisle 5",
+                    "Quantity": "two hundred",
+                    "Price": 9.99,
+                    "Supplier": "Supplier D",
+                    "Status": "Out of Stock",
+                    "Last Restocked": "20/12/2022"
+                },
+                {
+                    "Product ID": 1121,
+                    "Product Name": " widget b ",
+                    "Category": "TOYS",
+                    "Warehouse": "Warehouse 1",
+                    "Location": "Aisle 2",
+                    "Quantity": "50",
+                    "Price": 19.99,
+                    "Supplier": "Supplier C",
+                    "Status": "Out of Stock",
+                    "Last Restocked": "20/12/2022"
+                },
+                {
+                    "Product ID": 1214,
+                    "Product Name": " gadget z ",
+                    "Category": "FURNITURE",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 1",
+                    "Quantity": "50",
+                    "Price": 9.99,
+                    "Supplier": "Supplier A",
+                    "Status": "Low Stock",
+                    "Last Restocked": "15/01/2023"
+                },
+                {
+                    "Product ID": 1330,
+                    "Product Name": " widget c ",
+                    "Category": "TOYS",
+                    "Warehouse": "Warehouse 3",
+                    "Location": "Aisle 4",
+                    "Quantity": "150",
+                    "Price": 9.99,
+                    "Supplier": "Supplier B",
+                    "Status": "In Stock",
+                    "Last Restocked": "25/04/2023"
+                },
+                {
+                    "Product ID": 1372,
+                    "Product Name": " gadget y ",
+                    "Category": "FURNITURE",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 1",
+                    "Quantity": "two hundred",
+                    "Price": 49.99,
+                    "Supplier": "Supplier A",
+                    "Status": "Low Stock",
+                    "Last Restocked": "05/03/2023"
+                },
+                {
+                    "Product ID": 1099,
+                    "Product Name": " widget a ",
+                    "Category": "ELECTRONICS",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 5",
+                    "Quantity": "300",
+                    "Price": 49.99,
+                    "Supplier": "Supplier B",
+                    "Status": "Out of Stock",
+                    "Last Restocked": "05/03/2023"
+                },
+                {
+                    "Product ID": 1871,
+                    "Product Name": " widget b ",
+                    "Category": "CLOTHING",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 2",
+                    "Quantity": "100",
+                    "Price": NaN,
+                    "Supplier": "Supplier D",
+                    "Status": "Out of Stock",
+                    "Last Restocked": "25/04/2023"
+                }
+            ],
+            "target_duplicate_primary_key_preview": [
+                {
+                    "Product ID": 1102,
+                    "Product Name": " gadget y ",
+                    "Category": "ELECTRONICS",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 1",
+                    "Quantity": "300",
+                    "Price": 9.99,
+                    "Supplier": "Supplier C",
+                    "Status": "In Stock",
+                    "Last Restocked": NaN
+                },
+                {
+                    "Product ID": 1860,
+                    "Product Name": " widget a ",
+                    "Category": "CLOTHING",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 3",
+                    "Quantity": "100",
+                    "Price": 19.99,
+                    "Supplier": "Supplier B",
+                    "Status": "In Stock",
+                    "Last Restocked": "20/12/2022"
+                },
+                {
+                    "Product ID": 1270,
+                    "Product Name": " gadget z ",
+                    "Category": "TOYS",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 4",
+                    "Quantity": "50",
+                    "Price": 49.99,
+                    "Supplier": "Supplier B",
+                    "Status": "In Stock",
+                    "Last Restocked": "20/12/2022"
+                },
+                {
+                    "Product ID": 1020,
+                    "Product Name": " widget c ",
+                    "Category": "CLOTHING",
+                    "Warehouse": "Warehouse 1",
+                    "Location": "Aisle 5",
+                    "Quantity": "two hundred",
+                    "Price": 9.99,
+                    "Supplier": "Supplier D",
+                    "Status": "Out of Stock",
+                    "Last Restocked": "20/12/2022"
+                },
+                {
+                    "Product ID": 1121,
+                    "Product Name": " widget b ",
+                    "Category": "TOYS",
+                    "Warehouse": "Warehouse 1",
+                    "Location": "Aisle 2",
+                    "Quantity": "50",
+                    "Price": 19.99,
+                    "Supplier": "Supplier C",
+                    "Status": "Out of Stock",
+                    "Last Restocked": "20/12/2022"
+                },
+                {
+                    "Product ID": 1214,
+                    "Product Name": " gadget z ",
+                    "Category": "FURNITURE",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 1",
+                    "Quantity": "50",
+                    "Price": 9.99,
+                    "Supplier": "Supplier A",
+                    "Status": "Low Stock",
+                    "Last Restocked": "15/01/2023"
+                },
+                {
+                    "Product ID": 1330,
+                    "Product Name": " widget c ",
+                    "Category": "TOYS",
+                    "Warehouse": "Warehouse 3",
+                    "Location": "Aisle 4",
+                    "Quantity": "150",
+                    "Price": 9.99,
+                    "Supplier": "Supplier B",
+                    "Status": "In Stock",
+                    "Last Restocked": "25/04/2023"
+                },
+                {
+                    "Product ID": 1372,
+                    "Product Name": " gadget y ",
+                    "Category": "FURNITURE",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 1",
+                    "Quantity": "two hundred",
+                    "Price": 49.99,
+                    "Supplier": "Supplier A",
+                    "Status": "Low Stock",
+                    "Last Restocked": "05/03/2023"
+                },
+                {
+                    "Product ID": 1099,
+                    "Product Name": " widget a ",
+                    "Category": "ELECTRONICS",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 5",
+                    "Quantity": "300",
+                    "Price": 49.99,
+                    "Supplier": "Supplier B",
+                    "Status": "Out of Stock",
+                    "Last Restocked": "05/03/2023"
+                },
+                {
+                    "Product ID": 1871,
+                    "Product Name": " widget b ",
+                    "Category": "CLOTHING",
+                    "Warehouse": "Warehouse 2",
+                    "Location": "Aisle 2",
+                    "Quantity": "100",
+                    "Price": NaN,
+                    "Supplier": "Supplier D",
+                    "Status": "Out of Stock",
+                    "Last Restocked": "25/04/2023"
+                }
+            ],
+            "missing_keys_in_target_count": 0,
+            "extra_keys_in_target_count": 0,
+            "value_mismatch_count": 0,
+            "missing_keys_in_target": [],
+            "extra_keys_in_target": [],
+            "value_mismatches_preview": []
+        }
+    ]
+}

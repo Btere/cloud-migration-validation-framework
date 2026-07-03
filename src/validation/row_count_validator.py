@@ -44,8 +44,9 @@ def validate_row_count_in_data(source_df: pd.DataFrame, target_df: pd.DataFrame)
 
     return {
         "check_name": "row_count_validation",
-        "source_count": source_count,
-        "target_count": target_count,
-        "difference": difference,
-        "status": status,
+        "dataset_name": "source_vs_target",
+    "source_count": source_count,
+    "target_count": target_count,
+    "difference": difference,
+    "status": status,
     }
