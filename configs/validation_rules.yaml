@@ -1,0 +1,41 @@
+warehouse_inventory:
+  primary_key: Product ID
+
+  required_columns:
+    - Product ID
+    - Product Name
+    - Category
+    - Warehouse
+    - Location
+    - Quantity
+    - Price
+    - Status
+
+  optional_columns:
+    - Supplier
+    - Last Restocked
+
+  expected_data_types:
+    Product ID: int64
+    Product Name: object
+    Category: object
+    Warehouse: object
+    Location: object
+    Quantity: object
+    Price: float64
+    Supplier: object
+    Status: object
+    Last Restocked: object
+
+  business_rules:
+    quantity_min: 0
+    #max_missing_oercentage: 0.0
+    price_min: 0
+    allowed_status:
+      - In Stock
+      - Out of Stock
+    allowed_categories:
+      - ELECTRONICS
+      - FURNITURE
+      - CLOTHING
+      - TOYS

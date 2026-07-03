@@ -355,3 +355,7 @@ I like this architecture because it's **principle-based**, not dataset-based. Wh
 * Does it satisfy the business rules?
 
 That makes your framework reusable across different projects—the kind of design decision interviewers often appreciate because it shows you're thinking beyond a single dataset.
+
+
+#### Migrating AWS s3 to GCS, what validation do we do
+For S3 to GCS migration, I would validate first at object level by comparing object counts, paths, sizes, metadata, and checksums. Then I would validate at content level by reading the migrated datasets and checking schema, row counts, missing records, duplicates, nulls, business rules, and source-target parity. That gives both transfer integrity and data quality evidence for migration sign-off. The goal of the validation framework is to compare data before and after cloud migration. At the object level, it checks that files moved from S3 to GCS completely. At the content level, it validates schema, row counts, duplicates, missing records, nulls, checksums, and business rules. The final output is an evidence report showing whether the migrated data is ready for acceptance sign-off.
