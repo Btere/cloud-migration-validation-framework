@@ -17,7 +17,7 @@ It validates:
 - Metadata validation
 - Bronze/Silver/Gold validation
 
-I built a cloud migration validation framework that simulates AWS-to-GCP data migration. It validates schemas, row counts, nulls, duplicates, checksums, image and video integrity, and generates evidence reports. I built it in Python, SQL, and PySpark using a modular architecture because I wanted to deepen my understanding of the exact challenges involved in migration validation.
+We built a cloud migration validation framework that simulates AWS-to-GCP data migration. It validates schemas, row counts, nulls, duplicates, checksums, image and video integrity, and generates evidence reports. I built it in Python, SQL, and PySpark using a modular architecture because I wanted to deepen my understanding of the exact challenges involved in migration validation.
 
 ### DATA VALIDATION PILLARS
 
@@ -314,7 +314,7 @@ Checks
 * Pipeline logs
 * Retry validation
 
-# The order I would build your project
+# The order we would build this project
 
 ```text
 validation/
@@ -344,7 +344,7 @@ validation/
 
 ## Why this structure?
 
-I like this architecture because it's **principle-based**, not dataset-based. Whether you're validating warehouse data, customer records, images, videos, or text, you're asking the same kinds of questions:
+We like this architecture because it's **principle-based**, not dataset-based. Whether you're validating warehouse data, customer records, images, videos, or text, you're asking the same kinds of questions:
 
 * Is the schema correct?
 * Is the data complete?
@@ -412,3 +412,30 @@ A primary key is a database constraint used to uniquely identify a record, while
 └── compare_columns         → Source-Target Parity Validator
 
 "Each validator reads only the configuration relevant to its responsibility. The validation engine is generic, while dataset-specific rules are externalized in YAML."
+
+#### Questions
+
+1., Design and implement automated data validation pipelines comparing AWS and GCP outputs using Python and Databricks"
+
+What we're building:
+
+Source Dataset
+        ↓
+Load Dataset
+        ↓
+Data Profiling
+        ↓
+Schema Validation
+        ↓
+Completeness Validation
+        ↓
+Uniqueness Validation
+        ↓
+Validity Validation
+        ↓
+Parity Validation
+        ↓
+Business Rule Validation
+        ↓
+Migration Report
+We do this in Python Pandas and then we  replace pandas with Pyspark/databric later.
