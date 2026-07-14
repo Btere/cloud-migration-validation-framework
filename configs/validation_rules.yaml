@@ -31,6 +31,17 @@ warehouse_inventory:
     Status: object
     Last Restocked: object
 
+
+  missing_placeholders:
+    - NaN
+    - nan
+    - NULL
+    - null
+    - N/A
+    - n/a
+    - None
+    - none
+
   numeric_columns:
     - Product ID
     - Quantity

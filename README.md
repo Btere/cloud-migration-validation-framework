@@ -466,7 +466,9 @@ Missing values
 Cardinality
 Primary key
 Schema inspection
-🔜 Phase 2 — Schema Validation
+
+
+### Phase 2 — Schema Validation
 
 Create:
 
@@ -499,4 +501,33 @@ SQL validation
 Airflow DAG
 Jenkins pipeline
 Telemetry & alerts
-Kafka validation concepts
+Kafka validation conceptsWhat are Bronze, Silver, and Gold layers
+
+### Phase 3: PySpark row-count validation.
+
+What problem are we solving?
+
+We want to answer:
+
+Did the source and target contain the same number of records after migration?
+
+This is a fast first check, but it is not enough on its own. Equal row counts can still hide:
+
+one missing record,
+one duplicated record,
+changed values.
+
+So this validator is useful, but it must be followed by uniqueness and parity checks.
+
+### Phase 4 PySpark completeness validation.
+
+This checks whether the dataset has missing information in required columns. In Spark, that means more than just actual null values. Your warehouse CSV also contains literal text like "NaN", so we should treat configured placeholder strings as missing too.
+
+#### What are Bronze, Silver, and Gold layers?
+"They are the three layers of the Medallion Architecture commonly used in Databricks. The Bronze layer stores raw ingested data with minimal changes and serves as the source of truth. The Silver layer contains cleaned, standardized, and validated data that's ready for downstream processing. The Gold layer contains curated business datasets, aggregates, and KPIs used for reporting, analytics, and machine learning. During cloud migration, I would validate parity at each layer to ensure the raw data, transformed data, and business outputs remain consistent between AWS and GCP."
+
+#### Conclusion
+When migrating data from AWS S3 to Google Cloud Storage, the main question I'm trying to answer is: Did every object move successfully, completely, and accurately from the source to the target?
+
+### why  use PySpark and pandas?
+Pandas is excellent for local analysis and smaller datasets because everything runs on a single machine. PySpark is designed for distributed processing, so it's more suitable for migration projects involving millions or billions of records where the data won't fit comfortably into memory on one machine
