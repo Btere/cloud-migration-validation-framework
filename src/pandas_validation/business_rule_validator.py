@@ -12,8 +12,7 @@ def validate_business_rules(
     dataset_name: str,
     rules: Dict[str, Any],
 ) -> Dict[str, Any]:
-    """
-    Validate business-specific rules.
+    """Validate business-specific rules.
 
     Example warehouse rules:
     - Quantity must be >= 0
