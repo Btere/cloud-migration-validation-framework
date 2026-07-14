@@ -2,29 +2,22 @@ from pathlib import Path
 from pprint import pprint
 from unittest import result
 
-from utils.config_loader import load_yaml_config
-from utils.file_loader import load_csv
-from utils.logger import setup_logger
+from src.utils.config_loader import load_yaml_config
+from src.utils.file_loader import load_csv
+from src.utils.logger import setup_logger
 
-from validation.data_profiler import generate_data_profile
-from validation.structural_schema_validator import validate_schema
-from validation.row_count_validator import validate_row_count_in_data
-from validation.compeletness_validator import validate_completeness
-from validation.uniquessness_data_validator import validate_unique_data_without_duplicates
-from validation.validity_validator import validate_validity
-from validation.business_rule_validator import validate_business_rules
-from validation.parity_validator import validate_source_target_parity
-from validation.report_generator import generate_json_report
+from src.settings import (VALIDATION_RULES_PATH,SOURCE_WAREHOUSE_DATASET_PATH,TARGET_WAREHOUSE_DATASET_PATH,WAREHOUSE_REPORT_PATH,)
 
-
-VALIDATION_RULES_PATH = Path("/Users/btereomotere/Downloads/Small Object dataset/data-migration-quality-check/cloud-migration-validation-framework/configs/validation_rules.yaml")
-
-SOURCE_DATASET_PATH = Path("/Users/btereomotere/Downloads/Small Object dataset/data-migration-quality-check/cloud-migration-validation-framework/dataset/source/warehouse_messy.csv")
-
-TARGET_DATASET_PATH = Path("/Users/btereomotere/Downloads/Small Object dataset/data-migration-quality-check/cloud-migration-validation-framework/dataset/target/warehouse_messy.csv")
-
-REPORT_PATH = Path("reports/warehouse_validation_report.json")
-
+from src.pandas_validation.data_profiler import generate_data_profile
+from src.pandas_validation.structural_schema_validator import validate_schema
+from src.pandas_validation.row_count_validator import validate_row_count_in_data
+from src.pandas_validation.compeletness_validator import validate_completeness
+from src.pandas_validation.uniquessness_data_validator import (validate_unique_data_without_duplicates,
+)
+from src.pandas_validation.validity_validator import validate_validity
+from src.pandas_validation.business_rule_validator import validate_business_rules
+from src.pandas_validation.parity_validator import validate_source_target_parity
+from src.pandas_validation.report_generator import generate_json_report
 
 def main() -> None:
     setup_logger()
@@ -32,8 +25,8 @@ def main() -> None:
     rules = load_yaml_config(VALIDATION_RULES_PATH)
     warehouse_rules = rules["warehouse_inventory"]
 
-    source_df = load_csv(SOURCE_DATASET_PATH)
-    target_df = load_csv(TARGET_DATASET_PATH)
+    source_df = load_csv(SOURCE_WAREHOUSE_DATASET_PATH)
+    target_df = load_csv(TARGET_WAREHOUSE_DATASET_PATH)
 
     source_profile = generate_data_profile(
         df=source_df,
@@ -127,7 +120,7 @@ def main() -> None:
 
     generate_json_report(
     validation_results=validation_results,
-    output_path=REPORT_PATH,
+    output_path=WAREHOUSE_REPORT_PATH,
 )
 
     print("\nVALIDATION SUMMARY")
@@ -139,7 +132,7 @@ def main() -> None:
         f"{result.get('status', 'UNKNOWN')}"
     )
 
-    print(f"\nReport generated at: {REPORT_PATH}")
+    print(f"\nReport generated at: {WAREHOUSE_REPORT_PATH}")
 
     print("\nPARITY RESULT PREVIEW")
     pprint(parity_result)

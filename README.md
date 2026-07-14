@@ -439,3 +439,64 @@ Business Rule Validation
         ↓
 Migration Report
 We do this in Python Pandas and then we  replace pandas with Pyspark/databric later.
+
+## Pyspark 
+src/pyspark_validation/validation_pipeline.py
+
+That file should:
+
+Load source Spark DataFrame
+Load target Spark DataFrame
+Run profiling
+Run schema validation
+Run row count validation
+Run completeness validation
+Run uniqueness validation
+Run validity validation
+Run business rules
+Run parity validation
+Generate results
+Fail the job if critical checks fail
+
+Phase 1 — PySpark Data Profiling (Done)
+SparkSession
+Read CSV
+Profile data
+Missing values
+Cardinality
+Primary key
+Schema inspection
+🔜 Phase 2 — Schema Validation
+
+Create:
+
+src/pyspark_validation/schema_validator.py
+
+We'll compare:
+
+Column names
+Missing columns
+Extra columns
+Data types
+Column order (optional)
+Nullability
+Schema compatibility
+
+Exactly like the pandas version, but using Spark APIs.
+
+Then:
+Row Count Validator
+Completeness Validator
+Uniqueness Validator
+Validity Validator
+Business Rule Validator
+Source–Target Parity Validator
+Validation Pipeline
+JSON Report
+Databricks Notebook
+Bronze/Silver/Gold validation
+SQL validation
+Airflow DAG
+Jenkins pipeline
+Telemetry & alerts
+Kafka validation concepts
