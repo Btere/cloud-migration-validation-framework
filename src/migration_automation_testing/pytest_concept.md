@@ -298,3 +298,7 @@ pytest -m smoke
 #### Run everything except smoke tests
 7. Run everything except smoke tests
 pytest -m "not smoke"
+
+
+### Decorator
+A decorator is a function that extend the behaviour of another function w/o modifying the base function. We pass the base function as an argument to the decorator.

@@ -1,12 +1,11 @@
 import logging
 from typing import Any, Dict
-
 from pyspark.sql import DataFrame
-
+from src.migration_automation_testing.pytest_concept. pytest_decorator import log_test
 
 logger = logging.getLogger(__name__)
 
-
+@log_test
 def validate_row_count(source_df: DataFrame,target_df: DataFrame,) -> Dict[str, Any]:
     """Validate row-count parity between source and target PySpark DataFrames.
 

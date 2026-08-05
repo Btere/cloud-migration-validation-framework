@@ -5,8 +5,12 @@ import pandas as pd
 from src.utils.file_loader import load_csv
 from src.utils.logger import setup_logger
 
+from src.migration_automation_testing.pytest_concept. pytest_decorator import log_test
+
+
 logger = logging.getLogger(__name__)
 
+@log_test
 def validate_row_count_in_data(source_df: pd.DataFrame, target_df: pd.DataFrame) -> Dict[str, Union[int, bool]]:
     """
     Validate that the source and target datasets contain the same number of rows.

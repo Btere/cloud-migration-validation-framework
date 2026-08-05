@@ -1,13 +1,17 @@
 import pandas as pd
 from src.pandas_validation.row_count_validator import validate_row_count_in_data
+from src.migration_automation_testing.pytest_concept.pytest_decorator import log_test
+from src.pandas_validation.row_count_validator import (validate_row_count,)
 
+@log_test
 def test_row_count_match():
     source_df = pd.DataFrame({"id": [1, 2, 3], "name": ["Alice", "Bob", "Charlie"]})
     target_df = pd.DataFrame({"id": [1, 2, 3], "name": ["Alice", "", "Charlie"]})
     result = validate_row_count_in_data(source_df, target_df)
     assert result["status"] == "PASS"
     assert result["difference"] == 0
-    
+
+@log_test
 def test_target_has_more_rows():
     source_df = pd.DataFrame({"id": [1, 2, 3], "name": ["Alice", "Bob", "Charlie"]})
     target_df = pd.DataFrame({"id": [1, 2, 3, 4], "name": ["Alice", "Bob", "Charlie", "David"]})
@@ -17,6 +21,7 @@ def test_target_has_more_rows():
     assert result["target_count"] == 4
 
 
+@log_test
 def test_source_has_more_rows():
     source_df = pd.DataFrame({"id": [1, 2, 3, 4], "name": ["Alice", "Bob", "Charlie", "David"]})
     target_df = pd.DataFrame({"id": [1, 2, 3], "name": ["Alice", "Bob", "Charlie"]})
@@ -24,7 +29,8 @@ def test_source_has_more_rows():
     assert result["status"] == "FAIL"
     assert result["difference"] == -1
     assert result["source_count"] == 4
-    
+
+@log_test
 def test_empty_dataframes():
     source_df = pd.DataFrame()
 
@@ -36,7 +42,8 @@ def test_empty_dataframes():
     assert result["target_count"] == 0
     assert result["difference"] == 0
     assert result["status"] == "PASS"
-    
+
+@log_test   
 def test_large_dataset():
     source_df = pd.DataFrame(
         {
@@ -56,5 +63,12 @@ def test_large_dataset():
     assert result["target_count"] == 10000
     assert result["difference"] == 0
     assert result["status"] == "PASS"
-    
+
+@log_test
+def test_row_counts(review_datasets):
+    source_df, target_df = review_datasets
+
+    result = validate_row_count(source_df, target_df)
+
+    assert result["status"] == "PASS"
     
